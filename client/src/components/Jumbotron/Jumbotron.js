@@ -1,12 +1,23 @@
-import React from "react";
+// Import React
+import React from 'react';
 
-const Jumbotron = ({ children }) => (
-  <div
-    style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
-    className="jumbotron"
-  >
-    {children}
-  </div>
-);
+// Import the Jumbotron UI component from the reactstrap framework.
+import { Jumbotron } from 'reactstrap';
 
-export default Jumbotron;
+// Import Jumbotron style sheet.
+import './Jumbotron.css';
+
+// Jumbotron component
+const NYTJumbotron = (props) => {
+    return (
+        <div className="header">
+            <Jumbotron className="text-center jumbotron">
+                <h1 className="display-3">New York Times React Search</h1>
+                <p className="lead">Search, read, and annotate New York Times articles for free!</p>
+            </Jumbotron>
+        </div>
+    );
+};
+
+// Export Jumbotron component.
+export default NYTJumbotron;
